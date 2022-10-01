@@ -22,14 +22,10 @@ public abstract class EntityBase : MonoBehaviour
 
     public void Update()
     {
-        if(this.health <= 0)
+        if (this.health <= 0)
         {
             onDeath();
         }
-    }
-
-    public void FixedUpdate()
-    {
         Move();
     }
 

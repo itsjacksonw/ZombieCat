@@ -23,9 +23,9 @@ public class PlayerController : EntityBase {
         
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
-        base.FixedUpdate();
+        base.Update();
         if (Time.time >= playerAttack.nextAttackTime)
         {
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
