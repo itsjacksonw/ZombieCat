@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         body = transform.GetComponent<Rigidbody2D>();
 
         playerController = GetComponent<PlayerController>();
-
+        walkSpeed = playerController.speed;
     }
 
     private void FixedUpdate()

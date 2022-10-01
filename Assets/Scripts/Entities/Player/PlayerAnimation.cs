@@ -26,6 +26,11 @@ public class PlayerAnimation : MonoBehaviour
         playerAnimator.Play("falling");
     }
 
+    public void attackAnimation(int currentState)
+    {
+        playerAnimator.Play("Attacking");
+    }
+
     public void deathAnimation(int currentState)
     {
 
