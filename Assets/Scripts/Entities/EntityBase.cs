@@ -29,7 +29,7 @@ public abstract class EntityBase : MonoBehaviour
         Move();
     }
 
-    public void takeDamage(int amt)
+    public void takeDamage(float amt)
     {
         Debug.Log("Taking damage");
         health -= amt;

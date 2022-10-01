@@ -1799,7 +1799,7 @@ GameObject:
   - component: {fileID: 1639256975}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
-  attackPower: 2
+  attackPower: 3
   speed: 6
   healthBar: {fileID: 1573981386}
 --- !u!61 &1639256970
