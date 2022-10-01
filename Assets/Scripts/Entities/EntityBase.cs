@@ -22,16 +22,13 @@ public abstract class EntityBase : MonoBehaviour
 
     public void Update()
     {
-        if(this.health <= 0)
+        if (this.health <= 0)
         {
             onDeath();
         }
-
-        Move();
     }
 
-
-    public void takeDamage(int amt)
+    public void takeDamage(float amt)
     {
         Debug.Log("Taking damage");
         health -= amt;

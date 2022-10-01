@@ -17,11 +17,13 @@ public class PlayerAttack : MonoBehaviour
     public float nextAttackTime { get; set; } = 0F;
 
     private PlayerAnimation playerAnimation;
+    private PlayerDecay playerDecay;
 
     public void Awake()
     {
         this.rend = GetComponent<SpriteRenderer>();
         playerAnimation = GetComponent<PlayerAnimation>();
+        playerDecay = GetComponent<PlayerDecay>();
     }
 
     public void Melee()
@@ -48,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
         //Damage enemies
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EntityBase>().takeDamage(attackPower);
+            enemy.GetComponent<EntityBase>().takeDamage(attackPower / (playerDecay.currentState + 1));
             Debug.Log("Hit enemy");
         }
     }
