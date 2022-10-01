@@ -26,12 +26,10 @@ public abstract class EntityBase : MonoBehaviour
         {
             onDeath();
         }
-    }
 
-    public void FixedUpdate()
-    {
         Move();
     }
+
 
     public void takeDamage(int amt)
     {

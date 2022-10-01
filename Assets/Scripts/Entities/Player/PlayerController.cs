@@ -23,12 +23,12 @@ public class PlayerController : EntityBase {
         
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
-        base.FixedUpdate();
+        base.Update();
         if (Time.time >= playerAttack.nextAttackTime)
         {
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 playerAttack.Melee();
                 playerAttack.nextAttackTime = Time.time + 1f / playerAttack.attackRate;
@@ -81,7 +81,7 @@ public class PlayerController : EntityBase {
         }
 
         /* Launch */
-        if (Input.GetButtonDown("Launch"))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             playerMovement.Launch();
         }
