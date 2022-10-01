@@ -3,32 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : EntityBase {
     
     private PlayerMovement playerMovement;
     private PlayerDecay playerDecay;
     private PlayerAnimation playerAnimation;
     private PlayerEat playerEat;
+    private PlayerAttack playerAttack;
 
-    public float maxHealth = 100.0f;
-    public float health;
     public Slider healthBar;
 
-    void Awake()
+    public void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerDecay = GetComponent<PlayerDecay>();
         playerAnimation = GetComponent<PlayerAnimation>();
         playerEat = GetComponent<PlayerEat>();
-
-        health = maxHealth;
+        playerAttack = GetComponent<PlayerAttack>();
         
     }
 
-    void Update()
+    public void FixedUpdate()
     {
-        ProcessInputs();
+        base.FixedUpdate();
+        if (Time.time >= playerAttack.nextAttackTime)
+        {
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                playerAttack.Melee();
+                playerAttack.nextAttackTime = Time.time + 1f / playerAttack.attackRate;
+            }
+        }
+
 
         CheckDecayState();
 
@@ -36,11 +42,11 @@ public class PlayerController : MonoBehaviour
 
         if (health < 1)
         {
-            Death();
+            onDeath();
         }
 
     }
-    void ProcessInputs()
+    public override void Move()
     {
         /* Directional Input */
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -48,20 +54,22 @@ public class PlayerController : MonoBehaviour
 
         /* Walking */
         playerMovement.Walk(moveX);
-
-        if (moveX == 0 && playerMovement.body.velocity.y == 0)
+        if (Time.time >= playerAttack.nextAttackTime)
         {
-            playerAnimation.idleAnimation(playerDecay.currentState);
-        }
+            if (moveX == 0 && playerMovement.body.velocity.y == 0)
+            {
+                playerAnimation.idleAnimation(playerDecay.currentState);
+            }
 
-        else if (playerMovement.body.velocity.y == 0)
-        {
-            playerAnimation.walkAnimation(playerDecay.currentState);
-        }
+            else if (playerMovement.body.velocity.y == 0)
+            {
+                playerAnimation.walkAnimation(playerDecay.currentState);
+            }
 
-        else if (playerMovement.body.velocity.y < 0)
-        {
-            playerAnimation.fallAnimation(playerDecay.currentState);
+            else if (playerMovement.body.velocity.y < 0)
+            {
+                playerAnimation.fallAnimation(playerDecay.currentState);
+            }
         }
 
 
@@ -137,7 +145,7 @@ public class PlayerController : MonoBehaviour
             }
             if (health <= 0)
             {
-                Death();
+                onDeath();
             }
 
         }
@@ -148,11 +156,11 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Death")
         {
-            Death();
+            onDeath();
         }
     }
 
-    public void Death()
+    public override void onDeath()
     {
         Debug.Log("you died");
     }

@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: e25d1bd06b17e7a408c18fbc4b7db77b
+guid: 854c07ef5fa20ba41af128b24f6bd095
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7409504556183738389
-    second: zombieCat_0
-  - first:
-      213: 6518309414863006231
-    second: zombieCat_1
-  - first:
-      213: 9143686016544841993
-    second: zombieCat_2
-  - first:
-      213: -7827235952425650382
-    second: zombieCat_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -75,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,19 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,19 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombieCat_0
+      name: PlayerMelee_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 3
+        width: 22
+        height: 20
+      alignment: 9
+      pivot: {x: 0.59090906, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be7a7070dd62c2990800000000000000
-      internalID: -7409504556183738389
+      spriteID: a546423c5dcc3b04cbaac07fc3f0e42d
+      internalID: 533056199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombieCat_1
+      name: PlayerMelee_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 3
+        width: 25
+        height: 20
+      alignment: 9
+      pivot: {x: 0.52, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71a6ef890efa57a50800000000000000
-      internalID: 6518309414863006231
+      spriteID: c83f78e0ef519e342b497c2d1b31092b
+      internalID: -271354215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombieCat_2
+      name: PlayerMelee_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 54
+        y: 3
+        width: 25
+        height: 20
+      alignment: 9
+      pivot: {x: 0.52, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 901acd99cf5e4ee70800000000000000
-      internalID: 9143686016544841993
+      spriteID: e17c04328c5ac574c997abfbefea834a
+      internalID: -967515236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombieCat_3
+      name: PlayerMelee_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 80
+        y: 3
+        width: 25
+        height: 20
+      alignment: 9
+      pivot: {x: 0.52, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 237b08a2f52106390800000000000000
-      internalID: -7827235952425650382
+      spriteID: ab95e76bb2982024383ee691566ba1d2
+      internalID: 1376126635
       vertices: []
       indices: 
       edges: []
@@ -235,10 +199,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      zombieCat_1: 6518309414863006231
-      zombieCat_0: -7409504556183738389
-      zombieCat_3: -7827235952425650382
-      zombieCat_2: 9143686016544841993
+      PlayerMelee_4: -820864182
+      PlayerMelee_0: 533056199
+      PlayerMelee_1: -271354215
+      PlayerMelee_2: -967515236
+      PlayerMelee_3: 1376126635
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
