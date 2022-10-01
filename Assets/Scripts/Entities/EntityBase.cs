@@ -26,7 +26,6 @@ public abstract class EntityBase : MonoBehaviour
         {
             onDeath();
         }
-        Move();
     }
 
     public void takeDamage(float amt)
