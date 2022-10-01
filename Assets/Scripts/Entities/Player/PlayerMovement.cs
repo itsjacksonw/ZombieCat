@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool isLaunching;
     private bool hasHurt;
+    private bool hasHit;
 
     public GameObject bloodSplat;
 
@@ -95,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             isLaunching = false;
             hasHurt = false;
+            hasHit = false;
         }
 
         if (collision.gameObject.tag == "Wall" && isLaunching && !hasHurt)
@@ -102,6 +104,18 @@ public class PlayerMovement : MonoBehaviour
             hasHurt = true;
             playerController.health -= 5;
             Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
+        }
+
+        if (collision.gameObject.tag == "Enemy" && isLaunching && !hasHit)
+        {
+
+
+            hasHit = true;
+            playerController.health -= 1;
+            Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
+
+
+            collision.gameObject.GetComponent<BasicZombie>().takeDamage(2f);
         }
     }
 
