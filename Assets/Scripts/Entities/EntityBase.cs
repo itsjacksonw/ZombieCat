@@ -15,6 +15,8 @@ public abstract class EntityBase : MonoBehaviour
     [SerializeField]
     public int speed = 5;
 
+    public GameObject bloodyParticles;
+
     public void Start()
     {
         health = maxHealth;
@@ -35,6 +37,7 @@ public abstract class EntityBase : MonoBehaviour
     {
         Debug.Log("Taking damage");
         health -= amt;
+        Instantiate(bloodyParticles, transform.position, Quaternion.identity);
     }
 
     public abstract void Move();
