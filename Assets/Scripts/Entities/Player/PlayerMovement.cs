@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed;
     public float launchSpeed;
     public Rigidbody2D body;
+    private Vector2 lastVelocity;
 
     public bool isGrounded;
     public bool isLaunching;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        lastVelocity = body.velocity;
         if (isLaunching)
         {
             body.freezeRotation = false;
@@ -106,12 +108,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
 
-        if (collision.gameObject.tag == "Wall" && isLaunching && !hasHurt)
-        {
-            hasHurt = true;
-            playerController.health -= 5;
-            Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
-        }
+        
 
         if (collision.gameObject.tag == "Enemy" && isLaunching && !hasHit)
         {
@@ -131,6 +128,24 @@ public class PlayerMovement : MonoBehaviour
             isLaunching = false;
             hasHurt = false;
             hasHit = false;
+        }
+
+        if (collision.gameObject.tag == "Wall" && isLaunching && !hasHurt)
+        {
+            hasHurt = true;
+            playerController.health -= 5;
+            Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
+            
+            
+        }
+
+
+        if (collision.gameObject.tag == "Bounce")
+        {
+            float speed = lastVelocity.magnitude;
+            Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
+            body.velocity = direction * speed * 1.5f;
         }
     }
 
