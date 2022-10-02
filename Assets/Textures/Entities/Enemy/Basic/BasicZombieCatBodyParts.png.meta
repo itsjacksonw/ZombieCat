@@ -1,7 +1,43 @@
 fileFormatVersion: 2
-guid: a2a503612e717bb46bbc094033def510
+guid: 54b0f066ecb076f47add282843ee48bb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5242497279597161775
+    second: PlayerCat_Idle
+  - first:
+      213: 7990275846611609453
+    second: PlayerCat_Walk0
+  - first:
+      213: 9105138240097626339
+    second: PlayerCat_Walk1
+  - first:
+      213: -3029174454128725076
+    second: PlayerCat_Walk2
+  - first:
+      213: 9097872120409369504
+    second: PlayerCat_Walk3
+  - first:
+      213: 2321074784090192266
+    second: PlayerCat_Walk4
+  - first:
+      213: 4441149373976393075
+    second: PlayerCat_Walk5
+  - first:
+      213: 5752515239340336228
+    second: PlayerCat_Attack0
+  - first:
+      213: 6277863152049496385
+    second: PlayerCat_Attack1
+  - first:
+      213: 6421230260208950812
+    second: PlayerCat_Attack2
+  - first:
+      213: 3744056418376855808
+    second: PlayerCat_Attack3
+  - first:
+      213: 6513747393095582682
+    second: PlayerCat_Attack4
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -63,12 +99,12 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 32
-    resizeAlgorithm: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -80,21 +116,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,9 +128,21 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,9 +152,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,34 +165,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombiecatA_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 4
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 614d5c14f2a3d0c48a4b1bc15a92cc8c
-      internalID: -1928674444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombiecatA_1
+      name: BasicZombieCatBodyParts_0
       rect:
         serializedVersion: 2
         x: 11
-        y: 14
+        y: 117
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6543e91f58b0aa54fb742edb34956b7a
+      internalID: 1489873635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicZombieCatBodyParts_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 111
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b83e3007cda0843ab122054c96cf92
+      internalID: -519936676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicZombieCatBodyParts_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6f10c5422331b4382b82ad3c723374
+      internalID: 1166924736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicZombieCatBodyParts_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 117
         width: 4
-        height: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,50 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6381bfdae14a3334a93aaffc7188b0e5
-      internalID: -314920859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombiecatA_2
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 3
-        width: 8
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d357152da690d849b94b8d4696438d4
-      internalID: 1817626531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombiecatA_3
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 3
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a19ac9469b901d64b904dbe5ffd71255
-      internalID: 359724955
+      spriteID: 4f44fb7f4c8018e4b8cb611667cc1493
+      internalID: 1904580441
       vertices: []
       indices: 
       edges: []
@@ -223,10 +259,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      zombiecatA_0: -1928674444
-      zombiecatA_3: 359724955
-      zombiecatA_2: 1817626531
-      zombiecatA_1: -314920859
+      BasicZombieCatBodyParts_2: 1166924736
+      BasicZombieCatBodyParts_0: 1489873635
+      BasicZombieCatBodyParts_1: -519936676
+      BasicZombieCatBodyParts_3: 1904580441
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : EntityBase {
     
@@ -11,7 +12,12 @@ public class PlayerController : EntityBase {
     private PlayerEat playerEat;
     private PlayerAttack playerAttack;
 
+    private bool isDead;
+
     public Slider healthBar;
+
+    /** chunks */
+    public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles;
 
     public void Awake()
     {
@@ -162,7 +168,32 @@ public class PlayerController : EntityBase {
 
     public override void onDeath()
     {
-        Debug.Log("you died");
+
+        if (!isDead)
+        {
+
+
+            isDead = true;
+
+            Instantiate(bodyP1, transform.position, Quaternion.identity);
+            Instantiate(bodyP2, transform.position, Quaternion.identity);
+            Instantiate(bodyP3, transform.position, Quaternion.identity);
+            Instantiate(bodyP4, transform.position, Quaternion.identity);
+            Instantiate(bloodParticles, transform.position, Quaternion.identity);
+
+
+
+            Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+            Destroy(this.gameObject.GetComponent<Rigidbody2D>());
+            Destroy(this.gameObject.GetComponent<SpriteRenderer>());
+
+            Invoke("DestroyThis", 5f);
+        }
+    }
+
+    private void DestroyThis()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
