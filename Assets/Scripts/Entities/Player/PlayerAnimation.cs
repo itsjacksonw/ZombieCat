@@ -89,7 +89,24 @@ public class PlayerAnimation : MonoBehaviour
 
     public void attackAnimation(int currentState)
     {
-        playerAnimator.Play("Attacking");
+        
+        switch (hurtValue)
+        {
+            case 0:
+                playerAnimator.Play("Attacking");
+                break;
+            case 1:
+            case 2:
+                playerAnimator.Play("attack1");
+                break;
+            case 3:
+            case 4:
+                playerAnimator.Play("attack2");
+                break;
+            case 5:
+                playerAnimator.Play("attack3");
+                break;
+        }
     }
 
     public void deathAnimation(int currentState)
