@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddForce : MonoBehaviour
 {
-
+    public float despawnTime;
     Rigidbody2D rb;
     float dirX;
     float dirY;
@@ -20,7 +20,7 @@ public class AddForce : MonoBehaviour
         rb.AddForce(new Vector2(dirX, dirY), ForceMode2D.Impulse);
         rb.AddTorque(torque, ForceMode2D.Force);
 
-        Object.Destroy(gameObject, 5.0f);
+        Object.Destroy(gameObject, despawnTime);
     }
 
     // Update is called once per frame

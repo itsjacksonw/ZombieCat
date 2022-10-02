@@ -35,7 +35,7 @@ public class BasicZombie : EntityBase
 
 
     /** chunks */
-    public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles;
+    public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles, brain;
 
 
     private void Awake()
@@ -137,6 +137,7 @@ public class BasicZombie : EntityBase
         Instantiate(bodyP3, transform.position, Quaternion.identity);
         Instantiate(bodyP4, transform.position, Quaternion.identity);
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
+        Instantiate(brain, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
     }
