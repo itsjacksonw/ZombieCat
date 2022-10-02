@@ -33,7 +33,6 @@ public class PlayerAttack : MonoBehaviour
         float xLoc = Mathf.Abs(meleePoint.localPosition.x);
         if (rend.flipX)
         {
-            Debug.Log("Melee Left");
             meleePoint.SetLocalPositionAndRotation(new Vector3(-xLoc, meleePoint.localPosition.y, 0), meleePoint.localRotation);
         }
         else
@@ -57,8 +56,11 @@ public class PlayerAttack : MonoBehaviour
             {
                 return;
             }
-            enemy.GetComponent<EntityBase>().takeDamage(attackPower / (playerDecay.currentState + 1));
-            Debug.Log("Hit enemy");
+            var ent = enemy.GetComponent<EntityBase>();
+            if(ent != null)
+            {
+                ent.takeDamage(attackPower / (playerDecay.currentState + 1));
+            }
         }
     }
 }

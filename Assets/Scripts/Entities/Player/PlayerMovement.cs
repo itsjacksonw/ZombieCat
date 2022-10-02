@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
 
     public AudioSource walkSound, jumpSound, wallHit, bounceSound;
+    public AudioSystem audsys;
 
     private void Start()
     {
@@ -28,10 +29,16 @@ public class PlayerMovement : MonoBehaviour
 
         playerController = GetComponent<PlayerController>();
         walkSpeed = playerController.speed;
+
+        audsys = AudioSystem.instance;
     }
 
     private void FixedUpdate()
     {
+        if(body == null)
+        {
+            return;
+        }
         lastVelocity = body.velocity;
         if (isLaunching)
         {
@@ -87,7 +94,8 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == true)
         {
             body.velocity = new Vector2(body.velocity.x, jumpSpeed);
-            jumpSound.Play();
+            audsys.PlaySound(jumpSound.clip);
+            //jumpSound.Play();
         }
     }
 
@@ -95,7 +103,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded == true)
         {
-            jumpSound.Play();
+            audsys.PlaySound(jumpSound.clip);
+            //jumpSound.Play();
             isLaunching = true;
             Vector3 mousePosition = Vector3.zero;
             if (Camera.main != null)
@@ -151,7 +160,8 @@ public class PlayerMovement : MonoBehaviour
             playerController.health -= 5;
             Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
 
-            wallHit.Play();
+            //wallHit.Play();
+            audsys.PlaySound(wallHit.clip);
         }
 
 
@@ -161,7 +171,9 @@ public class PlayerMovement : MonoBehaviour
             Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
             body.velocity = direction * speed * 1.5f;
-            bounceSound.Play();
+
+            audsys.PlaySound(bounceSound.clip);
+            //bounceSound.Play();
         }
     }
 
@@ -183,7 +195,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!walkSound.isPlaying)
         {
-            walkSound.Play();
+            audsys.PlaySound(walkSound.clip);
+            //walkSound.Play();
         }
     }
 
