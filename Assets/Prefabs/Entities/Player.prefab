@@ -209,7 +209,7 @@ MonoBehaviour:
   isGrounded: 0
   isLaunching: 0
   bloodSplat: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
-  walkSound: {fileID: 0}
+  walkSound: {fileID: 2242437529992016427}
   jumpSound: {fileID: 4182730600485368210}
   wallHit: {fileID: 5021127937515237975}
   bounceSound: {fileID: 8405688639495007446}
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7722863bf53e0f4c83cadb70f53071e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 2259048689491487676}
   currentState: 0
 --- !u!114 &2259048689491487652
 MonoBehaviour:
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0b576c0db3e54f9a3bf98e6ff5ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDecay: {fileID: 0}
   playerAnimator: {fileID: 2259048689491487654}
 --- !u!114 &2259048689491487655
 MonoBehaviour:
