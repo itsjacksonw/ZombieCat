@@ -33,6 +33,8 @@ public class BasicZombie : EntityBase
 
     private bool isAttacking = false;
 
+    public bool inRange = false;
+
 
     /** chunks */
     public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles, brain;
@@ -83,35 +85,38 @@ public class BasicZombie : EntityBase
 
     public override void Move()
     {
-        if(Time.time >= turnaroundTime)
+        if (inRange)
         {
-            if (target.position.x > this.transform.position.x && dir != 1)
+            if (Time.time >= turnaroundTime)
             {
-                dir = 1;
-                turnaroundTime = Time.time + 1f / turnaroundRate;
+                if (target.position.x > this.transform.position.x && dir != 1)
+                {
+                    dir = 1;
+                    turnaroundTime = Time.time + 1f / turnaroundRate;
+                }
+                else if (target.position.x < this.transform.position.x && dir != -1)
+                {
+                    dir = -1;
+                    turnaroundTime = Time.time + 1f / turnaroundRate;
+                }
             }
-            else if(target.position.x < this.transform.position.x && dir != -1)
+
+
+            //Left or right?
+            if (dir < 0)
             {
-                dir = -1;
-                turnaroundTime = Time.time + 1f / turnaroundRate;
+                rend.flipX = true;
             }
+            else if (dir > 0)
+            {
+                rend.flipX = false;
+            }
+
+            anim.SetFloat("Speed", Mathf.Abs(dir));
+
+            Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
+            rb.velocity = targetVel;
         }
-
-
-        //Left or right?
-        if (dir < 0)
-        {
-            rend.flipX = true;
-        }
-        else if (dir > 0)
-        {
-            rend.flipX = false;
-        }
-
-        anim.SetFloat("Speed", Mathf.Abs(dir));
-
-        Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
-        rb.velocity = targetVel;
 
     }
 
@@ -155,5 +160,6 @@ public class BasicZombie : EntityBase
         //Gizmos.DrawWireSphere(meleePoint.position, attackRange);
         Gizmos.DrawWireSphere(meleePoint.position, detectRange);
     }
+
 
 }

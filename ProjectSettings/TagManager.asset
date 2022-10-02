@@ -9,6 +9,8 @@ TagManager:
   - Brain
   - Wall
   - Enemy
+  - Bounce
+  - NextScene
   layers:
   - Default
   - TransparentFX
