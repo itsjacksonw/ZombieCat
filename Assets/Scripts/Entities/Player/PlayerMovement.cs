@@ -91,13 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Enemy")
-        {
-            isGrounded = true;
-            isLaunching = false;
-            hasHurt = false;
-            hasHit = false;
-        }
+        
 
         if (collision.gameObject.tag == "Wall" && isLaunching && !hasHurt)
         {
@@ -115,7 +109,15 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
 
 
-            collision.gameObject.GetComponent<BasicZombie>().takeDamage(2f);
+            collision.gameObject.GetComponent<EntityBase>().takeDamage(2f);
+        }
+
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Enemy")
+        {
+            isGrounded = true;
+            isLaunching = false;
+            hasHurt = false;
+            hasHit = false;
         }
     }
 

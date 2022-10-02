@@ -33,6 +33,9 @@ public class RatBoss : EntityBase
 
     private bool isAttacking = false;
 
+    /** chunks */
+    public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles;
+
 
     private void Awake()
     {
@@ -127,6 +130,12 @@ public class RatBoss : EntityBase
     }
     public override void onDeath()
     {
+        Instantiate(bodyP1, transform.position, Quaternion.identity);
+        Instantiate(bodyP2, transform.position, Quaternion.identity);
+        Instantiate(bodyP3, transform.position, Quaternion.identity);
+        Instantiate(bodyP4, transform.position, Quaternion.identity);
+        Instantiate(bloodParticles, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 
