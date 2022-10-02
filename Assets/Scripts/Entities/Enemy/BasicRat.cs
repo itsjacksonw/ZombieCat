@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicZombie : EntityBase
+public class BasicRat : EntityBase
 {
     //Basic rendering and animation
     Animator anim;
@@ -10,7 +10,6 @@ public class BasicZombie : EntityBase
 
     Rigidbody2D rb;
 
-    [SerializeField]
     private Transform target;
     private int dir = 1;
 
@@ -33,11 +32,8 @@ public class BasicZombie : EntityBase
 
     private bool isAttacking = false;
 
-    public bool inRange = false;
-
-
     /** chunks */
-    public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles, brain;
+    public GameObject bloodParticles, brain;
 
     public AudioSource deathSound;
 
@@ -47,6 +43,8 @@ public class BasicZombie : EntityBase
         rb = this.GetComponent<Rigidbody2D>();
         rend = this.GetComponent<SpriteRenderer>();
         anim = this.GetComponent<Animator>();
+        PlayerController cont = (PlayerController)FindObjectOfType(typeof(PlayerController));
+        target = cont.transform;
     }
 
     private void FixedUpdate()
@@ -55,6 +53,7 @@ public class BasicZombie : EntityBase
         float xLoc = Mathf.Abs(meleePoint.localPosition.x);
         if (rend.flipX)
         {
+            Debug.Log("Melee Left");
             meleePoint.SetLocalPositionAndRotation(new Vector3(-xLoc, meleePoint.localPosition.y, 0), meleePoint.localRotation);
         }
         else
@@ -84,8 +83,6 @@ public class BasicZombie : EntityBase
 
     public override void Move()
     {
-        if (inRange)
-        {
             if (Time.time >= turnaroundTime)
             {
                 if (target.position.x > this.transform.position.x && dir != 1)
@@ -115,7 +112,6 @@ public class BasicZombie : EntityBase
 
             Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
             rb.velocity = targetVel;
-        }
 
     }
 
@@ -138,10 +134,10 @@ public class BasicZombie : EntityBase
     public override void onDeath()
 
     {
-        Instantiate(bodyP1, transform.position, Quaternion.identity);
-        Instantiate(bodyP2, transform.position, Quaternion.identity);
-        Instantiate(bodyP3, transform.position, Quaternion.identity);
-        Instantiate(bodyP4, transform.position, Quaternion.identity);
+        //Instantiate(bodyP1, transform.position, Quaternion.identity);
+        //Instantiate(bodyP2, transform.position, Quaternion.identity);
+        //Instantiate(bodyP3, transform.position, Quaternion.identity);
+        //Instantiate(bodyP4, transform.position, Quaternion.identity);
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
         Instantiate(brain, transform.position, Quaternion.identity);
 

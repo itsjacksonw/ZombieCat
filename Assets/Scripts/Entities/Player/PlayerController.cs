@@ -21,6 +21,10 @@ public class PlayerController : EntityBase {
 
     public AudioSource deathSound;
 
+    public Transform transformer;
+
+    private AudioSystem audsys;
+
     public void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -28,7 +32,9 @@ public class PlayerController : EntityBase {
         playerAnimation = GetComponent<PlayerAnimation>();
         playerEat = GetComponent<PlayerEat>();
         playerAttack = GetComponent<PlayerAttack>();
-        
+        transformer = transform;
+
+        audsys = AudioSystem.instance;
     }
 
     public void Update()
@@ -176,7 +182,8 @@ public class PlayerController : EntityBase {
 
 
             isDead = true;
-            deathSound.Play();
+            audsys.PlaySound(deathSound.clip);
+            //deathSound.Play();
 
             Instantiate(bodyP1, transform.position, Quaternion.identity);
             Instantiate(bodyP2, transform.position, Quaternion.identity);
