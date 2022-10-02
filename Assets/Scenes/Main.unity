@@ -687,10 +687,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -90
+    m_UpperAngle: 90
 --- !u!50 &838376636
 Rigidbody2D:
   serializedVersion: 4
@@ -902,6 +902,22 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bodyP1
+      value: 
+      objectReference: {fileID: 5690837597162777797, guid: dacd9569f1baacf49bd5e507f8f789c3, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bodyP2
+      value: 
+      objectReference: {fileID: 1115923356994952639, guid: 59282ab1eb84d9b4a8e6f2fdf06a9353, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bodyP3
+      value: 
+      objectReference: {fileID: 9170185723379221597, guid: f0829e2b08df81745bc043754c47520d, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bodyP4
+      value: 
+      objectReference: {fileID: 5711287502126929921, guid: 9e3ba6721ef25ff4bb395513ff1a4ada, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1639256976}
@@ -910,8 +926,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bloodParticles
+      value: 
+      objectReference: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
+      propertyPath: bloodyParticles
+      value: 
+      objectReference: {fileID: 2043658479910269361, guid: fa866bf499560634c92688549bd9f9aa, type: 3}
+    - target: {fileID: 4263436166528471064, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 192
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4263436166528471066, guid: d6e70f8cde0361b4988d50b1089123e6, type: 3}
       propertyPath: m_Material
@@ -1278,6 +1302,7 @@ GameObject:
   - component: {fileID: 1177204559}
   - component: {fileID: 1177204561}
   - component: {fileID: 1177204562}
+  - component: {fileID: 1177204563}
   m_Layer: 3
   m_Name: TailBase
   m_TagString: Untagged
@@ -1418,12 +1443,25 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: -1.8800001, y: 0.23999977}
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 10
-    m_MaximumMotorForce: 10000
+    m_MotorSpeed: 100
+    m_MaximumMotorForce: 100
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 90
-    m_UpperAngle: -90
+    m_LowerAngle: 60
+    m_UpperAngle: -60
+--- !u!114 &1177204563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177204557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0da8b00f6c08c44956a143ede5b4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tailSwapRate: 0.5
 --- !u!1 &1184897340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1478,7 @@ GameObject:
   - component: {fileID: 1184897347}
   m_Layer: 3
   m_Name: RatBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1567,12 +1605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4f87ef32891684aa524a4be06730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 20
   health: 0
   attackPower: 2
-  speed: 2
+  speed: 1
+  bloodyParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
   target: {fileID: 1639256976}
-  turnaroundRate: 3
+  turnaroundRate: 0.5
   meleePoint: {fileID: 1938577800}
   playerLayer:
     serializedVersion: 2
@@ -2396,7 +2435,13 @@ MonoBehaviour:
   health: 100
   attackPower: 2
   speed: 6
+  bloodyParticles: {fileID: 2043658479910269361, guid: fa866bf499560634c92688549bd9f9aa, type: 3}
   healthBar: {fileID: 1573981386}
+  bodyP1: {fileID: 2341091360181392861, guid: 02f73403b43d12b44b9abc65048f194c, type: 3}
+  bodyP2: {fileID: 6358594297358122693, guid: fd20f788b0ef16c4a83ab391ef924816, type: 3}
+  bodyP3: {fileID: 2221198886978123872, guid: 89c89ebcf96ad1c409fa2f0211db01dc, type: 3}
+  bodyP4: {fileID: 1549672350537853266, guid: 2585f4ed837f65a478412eaec5024742, type: 3}
+  bloodParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
 --- !u!61 &1639256970
 BoxCollider2D:
   m_ObjectHideFlags: 0
