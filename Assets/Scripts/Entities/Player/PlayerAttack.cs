@@ -19,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
     private PlayerAnimation playerAnimation;
     private PlayerDecay playerDecay;
 
+    public AudioSource swipeSound;
+
     public void Awake()
     {
         this.rend = GetComponent<SpriteRenderer>();
@@ -42,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
 
         //Play attack animation
         playerAnimation.attackAnimation(0);
+        swipeSound.Play();
 
         //Detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(meleePoint.position, attackRange, enemyLayer);

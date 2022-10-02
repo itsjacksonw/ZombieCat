@@ -19,6 +19,8 @@ public class PlayerController : EntityBase {
     /** chunks */
     public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles;
 
+    public AudioSource deathSound;
+
     public void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -174,6 +176,7 @@ public class PlayerController : EntityBase {
 
 
             isDead = true;
+            deathSound.Play();
 
             Instantiate(bodyP1, transform.position, Quaternion.identity);
             Instantiate(bodyP2, transform.position, Quaternion.identity);

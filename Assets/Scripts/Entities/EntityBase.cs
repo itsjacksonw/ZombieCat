@@ -17,6 +17,8 @@ public abstract class EntityBase : MonoBehaviour
 
     public GameObject bloodyParticles;
 
+    public AudioSource takeDamageSound;
+
     public void Start()
     {
         health = maxHealth;
@@ -38,6 +40,7 @@ public abstract class EntityBase : MonoBehaviour
         Debug.Log("Taking damage");
         health -= amt;
         Instantiate(bloodyParticles, transform.position, Quaternion.identity);
+        takeDamageSound.Play();
     }
 
     public abstract void Move();

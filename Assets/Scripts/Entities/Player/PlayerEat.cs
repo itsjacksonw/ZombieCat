@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerEat : MonoBehaviour
 {
-
+    public AudioSource eatSound;
     public bool needsHeal = false;
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -13,6 +13,7 @@ public class PlayerEat : MonoBehaviour
         {
             needsHeal = true;
             Destroy(col.gameObject);
+            eatSound.Play();
         }
     }
 }

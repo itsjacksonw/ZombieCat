@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerController playerController;
 
+    public AudioSource walkSound, jumpSound, wallHit, bounceSound;
+
     private void Start()
     {
         body = transform.GetComponent<Rigidbody2D>();
@@ -44,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
                 body.angularVelocity = 200.0f;
             }
 
+
         }
         else
         {
@@ -66,6 +69,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.localScale = new Vector3(-1, 1, 1);
             }
+
+            if (moveX == 0 && walkSound.isPlaying)
+            {
+                walkSound.Stop();
+            }
+
+            if (moveX != 0 && isGrounded)
+            {
+                playWalkSound();
+            }
         }   
     }
 
@@ -74,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == true)
         {
             body.velocity = new Vector2(body.velocity.x, jumpSpeed);
+            jumpSound.Play();
         }
     }
 
@@ -81,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded == true)
         {
+            jumpSound.Play();
             isLaunching = true;
             Vector3 mousePosition = Vector3.zero;
             if (Camera.main != null)
@@ -135,8 +150,8 @@ public class PlayerMovement : MonoBehaviour
             hasHurt = true;
             playerController.health -= 5;
             Instantiate(bloodSplat, new Vector2(body.transform.position.x, body.transform.position.y), Quaternion.identity);
-            
-            
+
+            wallHit.Play();
         }
 
 
@@ -146,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
             body.velocity = direction * speed * 1.5f;
+            bounceSound.Play();
         }
     }
 
@@ -161,6 +177,14 @@ public class PlayerMovement : MonoBehaviour
     public void moveTo(Transform pos)
     {
         this.transform.position = pos.position;
+    }
+
+    private void playWalkSound()
+    {
+        if (!walkSound.isPlaying)
+        {
+            walkSound.Play();
+        }
     }
 
 

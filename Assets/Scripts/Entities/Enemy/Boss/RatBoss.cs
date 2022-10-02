@@ -36,6 +36,8 @@ public class RatBoss : EntityBase
     /** chunks */
     public GameObject bodyP1, bodyP2, bodyP3, bodyP4, bloodParticles, brain;
 
+    public AudioSource deathSound;
+
 
     private void Awake()
     {
@@ -137,6 +139,7 @@ public class RatBoss : EntityBase
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
         Instantiate(brain, transform.position, Quaternion.identity);
 
+        deathSound.Play();
         Destroy(gameObject);
     }
 
