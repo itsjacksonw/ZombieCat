@@ -1611,7 +1611,7 @@ MonoBehaviour:
   speed: 1
   bloodyParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
   target: {fileID: 1639256976}
-  turnaroundRate: 0.5
+  turnaroundRate: 0.01
   meleePoint: {fileID: 1938577800}
   playerLayer:
     serializedVersion: 2
