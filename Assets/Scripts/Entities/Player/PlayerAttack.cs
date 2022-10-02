@@ -50,6 +50,10 @@ public class PlayerAttack : MonoBehaviour
         //Damage enemies
         foreach (Collider2D enemy in hitEnemies)
         {
+            if(enemy == null)
+            {
+                return;
+            }
             enemy.GetComponent<EntityBase>().takeDamage(attackPower / (playerDecay.currentState + 1));
             Debug.Log("Hit enemy");
         }

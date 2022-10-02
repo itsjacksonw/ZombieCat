@@ -80,7 +80,20 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == true)
         {
             isLaunching = true;
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mousePosition = Vector3.zero;
+            if (Camera.main != null)
+            {
+                mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            } else
+            {
+                Camera cam = (Camera)FindObjectOfType(typeof(Camera));
+                if (cam)
+                {
+                    mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+                }
+                
+            }
+            
             Vector2 direction = mousePosition - transform.position;
             direction = direction.normalized;
 
@@ -128,6 +141,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+
+    public void moveTo(Transform pos)
+    {
+        this.transform.position = pos.position;
     }
 
 

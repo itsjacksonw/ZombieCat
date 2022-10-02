@@ -311,6 +311,12 @@ MonoBehaviour:
   detectRange: 0.6
   meleeRate: 2
   nextAttackTime: 0
+  bodyP1: {fileID: 1411936226545493298, guid: cab4af591e6f4674797ee0be00c8049f, type: 3}
+  bodyP2: {fileID: 8587031544273088046, guid: 6ec4baf15c8085948a359af99d1cfb83, type: 3}
+  bodyP3: {fileID: 8536900559581336713, guid: 5ac0ffdcf6a60e648ac7122059b232b2, type: 3}
+  bodyP4: {fileID: 1779231994149435564, guid: 282948bf7690ba24e90696bd1fd2171a, type: 3}
+  bloodParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
+  brain: {fileID: 8503173022113709329, guid: 99561360cc045ac46857db9ff36f9a46, type: 3}
 --- !u!50 &5429863503969626039
 Rigidbody2D:
   serializedVersion: 4

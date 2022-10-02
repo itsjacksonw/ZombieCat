@@ -106,8 +106,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1364755963
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5242497279597161775, guid: 5da79f7c534858a4b87cab4ff63b83e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,6 +152,7 @@ MonoBehaviour:
   bodyP3: {fileID: 9170185723379221597, guid: f0829e2b08df81745bc043754c47520d, type: 3}
   bodyP4: {fileID: 5711287502126929921, guid: 9e3ba6721ef25ff4bb395513ff1a4ada, type: 3}
   bloodParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
+  brain: {fileID: 8503173022113709329, guid: 99561360cc045ac46857db9ff36f9a46, type: 3}
 --- !u!95 &34011149401025237
 Animator:
   serializedVersion: 4
