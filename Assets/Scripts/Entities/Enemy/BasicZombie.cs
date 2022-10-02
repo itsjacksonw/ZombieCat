@@ -40,6 +40,7 @@ public class BasicZombie : EntityBase
     public AudioSource deathSound;
 
 
+
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody2D>();

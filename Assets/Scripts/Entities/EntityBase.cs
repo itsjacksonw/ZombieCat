@@ -37,7 +37,6 @@ public abstract class EntityBase : MonoBehaviour
 
     public void takeDamage(float amt)
     {
-        Debug.Log("Taking damage");
         health -= amt;
         Instantiate(bloodyParticles, transform.position, Quaternion.identity);
         takeDamageSound.Play();

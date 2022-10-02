@@ -37,6 +37,8 @@ public class BasicRat : EntityBase
 
     public AudioSource deathSound;
 
+    
+
 
     private void Awake()
     {

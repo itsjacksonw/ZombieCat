@@ -651,7 +651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484948738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.370486, y: -2.7699153, z: -10.369852}
+  m_LocalPosition: {x: -4.7496443, y: -2.7699153, z: -10.369852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2638,7 +2638,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771739, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8137,10 +8137,6 @@ PrefabInstance:
       propertyPath: swipeSound
       value: 
       objectReference: {fileID: 1445457654}
-    - target: {fileID: 2259048689491487652, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
-      propertyPath: playerDecay
-      value: 
-      objectReference: {fileID: 1732899248}
     - target: {fileID: 2259048689491487653, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8235,17 +8231,6 @@ PrefabInstance:
       objectReference: {fileID: 1168497647}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
---- !u!114 &1732899248 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2259048689491487675, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
-  m_PrefabInstance: {fileID: 1732899233}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335648653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7722863bf53e0f4c83cadb70f53071e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1740426140
 GameObject:
   m_ObjectHideFlags: 0
