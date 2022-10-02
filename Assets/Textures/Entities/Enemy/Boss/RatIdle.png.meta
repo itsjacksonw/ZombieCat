@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 2925aae24826c784ebe4d4dbbad80f52
+guid: 58dc7c064a2c88e438591045bb62cd5e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6201019692056567399
-    second: WalkRight_0
-  - first:
-      213: -7852898016727190981
-    second: WalkRight_1
-  - first:
-      213: 3771676678745289610
-    second: WalkRight_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -72,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -91,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkRight_0
+      name: RatIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 8
-        height: 8
+        x: 2
+        y: 7
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99124c9c17d81f9a0800000000000000
-      internalID: -6201019692056567399
+      spriteID: 7f9de2743e93c97428543e574b2a4168
+      internalID: -256716426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkRight_1
+      name: RatIdle_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
+        x: 53
+        y: 7
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b323b973cd6e40390800000000000000
-      internalID: -7852898016727190981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkRight_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a83fc34c4ffa75430800000000000000
-      internalID: 3771676678745289610
+      spriteID: 4eec11a14be04d64081797760d9252e5
+      internalID: 1210443120
       vertices: []
       indices: 
       edges: []
@@ -187,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WalkRight_2: 3771676678745289610
-      WalkRight_0: -6201019692056567399
-      WalkRight_1: -7852898016727190981
+      RatIdle_1: 1210443120
+      RatIdle_0: -256716426
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

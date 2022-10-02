@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 2925aae24826c784ebe4d4dbbad80f52
+guid: 2570c76e104f9d84ba5756bc900a9cfb
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6201019692056567399
-    second: WalkRight_0
-  - first:
-      213: -7852898016727190981
-    second: WalkRight_1
-  - first:
-      213: 3771676678745289610
-    second: WalkRight_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -72,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -91,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkRight_0
+      name: RatBite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 8
-        height: 8
+        x: 3
+        y: 7
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99124c9c17d81f9a0800000000000000
-      internalID: -6201019692056567399
+      spriteID: 893e96d5e29b9d7439f8a8d4fdc27448
+      internalID: 723206390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkRight_1
+      name: RatBite_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
+        x: 37
+        y: 7
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b323b973cd6e40390800000000000000
-      internalID: -7852898016727190981
+      spriteID: b6408c074f72cde418cdda3e349fe0c7
+      internalID: -1075695227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkRight_2
+      name: RatBite_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 8
-        height: 8
+        x: 72
+        y: 7
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,8 +161,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a83fc34c4ffa75430800000000000000
-      internalID: 3771676678745289610
+      spriteID: 99685d8d7bdcb86459992513df94f0f6
+      internalID: -891806674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatBite_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 7
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6de7a487b605143b7208a69717c693
+      internalID: 2060578076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatBite_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 7
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d84622e975e6db4ab3056ff80c3ca4b
+      internalID: -172736778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatBite_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 7
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739830ca3f77852489163462093b18a7
+      internalID: 627025744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatBite_6
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 7
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0098c0d5158b24ea23cfa1f7acd735
+      internalID: -35486530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatBite_7
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 7
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65bb6c8d66238e44b94d9a269e3292c
+      internalID: -1221922634
       vertices: []
       indices: 
       edges: []
@@ -187,9 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WalkRight_2: 3771676678745289610
-      WalkRight_0: -6201019692056567399
-      WalkRight_1: -7852898016727190981
+      RatBite_4: -172736778
+      RatBite_7: -1221922634
+      RatBite_6: -35486530
+      RatBite_5: 627025744
+      RatBite_3: 2060578076
+      RatBite_0: 723206390
+      RatBite_1: -1075695227
+      RatBite_2: -891806674
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
