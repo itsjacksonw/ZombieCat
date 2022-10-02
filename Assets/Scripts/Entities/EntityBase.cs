@@ -13,7 +13,7 @@ public abstract class EntityBase : MonoBehaviour
     [SerializeField]
     protected int attackPower = 2;
     [SerializeField]
-    public int speed = 5;
+    public float speed = 5;
 
     public GameObject bloodyParticles;
 
