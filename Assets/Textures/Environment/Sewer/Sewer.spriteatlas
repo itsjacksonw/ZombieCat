@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sewer
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -751018111, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 166970551, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 1878613322, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 1737409823, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 334265184, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: -1081593408, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 1640864379, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: -411417662, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 1301612289, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 119215371, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: -1333455620, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: -1674476094, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 200847785, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: -1376168885, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  - {fileID: 652534457, guid: b2492959e6b1ed541aabd07fc55369d3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SewerTileset_12
+  - SewerTileset_11
+  - SewerTileset_10
+  - SewerTileset_8
+  - SewerTileset_9
+  - SewerTileset_4
+  - SewerTileset_5
+  - SewerTileset_6
+  - SewerTileset_7
+  - SewerTileset_0
+  - SewerTileset_1
+  - SewerTileset_2
+  - SewerTileset_3
+  - SewerTileset_14
+  - SewerTileset_13
+  m_RenderDataMap: {}
+  m_Tag: Sewer
+  m_IsVariant: 0
