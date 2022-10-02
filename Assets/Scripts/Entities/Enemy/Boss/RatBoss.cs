@@ -109,7 +109,7 @@ public class RatBoss : EntityBase
 
         anim.SetFloat("Speed", Mathf.Abs(dir));
 
-        Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
+        Vector2 targetVel = new Vector2(dir * speed * 50 * Time.deltaTime, rb.velocity.y);
         rb.velocity = targetVel;
 
     }

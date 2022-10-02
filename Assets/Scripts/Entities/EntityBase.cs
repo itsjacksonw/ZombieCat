@@ -39,7 +39,7 @@ public abstract class EntityBase : MonoBehaviour
     {
         health -= amt;
         Instantiate(bloodyParticles, transform.position, Quaternion.identity);
-        takeDamageSound.Play();
+        AudioSystem.instance.PlaySound(takeDamageSound.clip);
     }
 
     public abstract void Move();

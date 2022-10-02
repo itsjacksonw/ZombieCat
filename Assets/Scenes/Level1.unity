@@ -3624,6 +3624,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1445457666 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5224133168281277282, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
+  m_PrefabInstance: {fileID: 1732899233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1477211876
 GameObject:
   m_ObjectHideFlags: 0
@@ -8229,6 +8234,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1168497647}
+    - target: {fileID: 2259048689491487676, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1445457666}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccfc26866dfa914a83455445f775e25, type: 3}
 --- !u!1 &1740426140

@@ -48,6 +48,11 @@ public class BasicZombie : EntityBase
         anim = this.GetComponent<Animator>();
     }
 
+    public void Update()
+    {
+        if (!isAttacking) base.Update();
+    }
+
     private void FixedUpdate()
     {
         #region UpdateMeleePoint
@@ -62,10 +67,6 @@ public class BasicZombie : EntityBase
         }
         #endregion
 
-        if (!isAttacking)
-        {
-            Move();
-        }
         if(Physics2D.OverlapCircleAll(meleePoint.position, detectRange, playerLayer).Length > 0 && !isAttacking)
         {
             rb.velocity = Vector2.zero;
@@ -110,7 +111,7 @@ public class BasicZombie : EntityBase
 
         anim.SetFloat("Speed", Mathf.Abs(dir));
 
-        Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
+        Vector2 targetVel = new Vector2(dir * speed * 50 * Time.deltaTime, rb.velocity.y);
         rb.velocity = targetVel;
 
     }

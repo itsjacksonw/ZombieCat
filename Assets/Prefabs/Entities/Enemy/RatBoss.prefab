@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 7700699694508500609}
   m_Layer: 3
   m_Name: RatBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   attackPower: 2
   speed: 1
   bloodyParticles: {fileID: 7106907112509347025, guid: 4710b50229f65914f9cc7fcaf1141109, type: 3}
-  takeDamageSound: {fileID: 0}
+  takeDamageSound: {fileID: 7700699694508500609}
   target: {fileID: 0}
   turnaroundRate: 0.1
   meleePoint: {fileID: 5429863504185911167}

@@ -49,13 +49,17 @@ public class BasicRat : EntityBase
         target = cont.transform;
     }
 
+    public void Update()
+    {
+        if (!isAttacking) base.Update();
+    }
+
     private void FixedUpdate()
     {
         #region UpdateMeleePoint
         float xLoc = Mathf.Abs(meleePoint.localPosition.x);
         if (rend.flipX)
         {
-            Debug.Log("Melee Left");
             meleePoint.SetLocalPositionAndRotation(new Vector3(-xLoc, meleePoint.localPosition.y, 0), meleePoint.localRotation);
         }
         else
@@ -64,10 +68,6 @@ public class BasicRat : EntityBase
         }
         #endregion
 
-        if (!isAttacking)
-        {
-            Move();
-        }
         if(Physics2D.OverlapCircleAll(meleePoint.position, detectRange, playerLayer).Length > 0 && !isAttacking)
         {
             rb.velocity = Vector2.zero;
@@ -112,7 +112,7 @@ public class BasicRat : EntityBase
 
             anim.SetFloat("Speed", Mathf.Abs(dir));
 
-            Vector2 targetVel = new Vector2(dir * speed * 100 * Time.deltaTime, rb.velocity.y);
+            Vector2 targetVel = new Vector2(dir * speed * 50 * Time.deltaTime, rb.velocity.y);
             rb.velocity = targetVel;
 
     }
@@ -143,7 +143,7 @@ public class BasicRat : EntityBase
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
         Instantiate(brain, transform.position, Quaternion.identity);
 
-        deathSound.Play();
+        AudioSystem.instance.PlaySound(deathSound.clip);
         Destroy(gameObject);
     }
 
