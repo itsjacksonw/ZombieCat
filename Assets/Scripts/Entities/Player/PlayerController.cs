@@ -40,7 +40,7 @@ public class PlayerController : EntityBase {
     public void Update()
     {
         base.Update();
-        if (Time.time >= playerAttack.nextAttackTime)
+        if (Time.time >= playerAttack.nextAttackTime && !PauseMenu.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
