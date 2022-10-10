@@ -239,7 +239,7 @@ MonoBehaviour:
   attackRange: 0.5
   attackPower: 2
   attackRate: 3
-  swipeSound: {fileID: 970501028665166600}
+  swipeSound: {fileID: 1341591146210766643}
 --- !u!114 &2259048689491487675
 MonoBehaviour:
   m_ObjectHideFlags: 0

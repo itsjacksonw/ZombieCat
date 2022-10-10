@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f14fe6299d99d449adc4023d059d0c4
+guid: d0918aa60448cef48a26f6a3f9e103e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,64 +129,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: running_0
+      name: GrappleArm_hand
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 22
-        height: 15
+        x: 0
+        y: 6
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f2acb20acd52e49b10b32ba7cd0c7b
-      internalID: -1515443897
+      spriteID: c2c89bdded02fbf46bc1d4936338e6dd
+      internalID: 1748522346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_1
+      name: GrappleArm_arm
       rect:
         serializedVersion: 2
-        x: 31
-        y: 3
-        width: 22
-        height: 15
+        x: 1
+        y: 0
+        width: 6
+        height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53554f8ed062e0a4abe06a77f650f8e0
-      internalID: 426176337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: running_2
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 3
-        width: 23
-        height: 14
-      alignment: 9
-      pivot: {x: 0.47826087, y: 0.53571427}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2032ec00bf471444a8aabceeac0ba5f6
-      internalID: -1674504335
+      spriteID: 76043ca8e3cb4d8459f81903399557a5
+      internalID: -995818665
       vertices: []
       indices: 
       edges: []
@@ -202,9 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      running_0: -1515443897
-      running_2: -1674504335
-      running_1: 426176337
+      GrappleArm_arm: -995818665
+      GrappleArm_hand: 1748522346
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -11,6 +11,7 @@ public class PlayerController : EntityBase {
     private PlayerAnimation playerAnimation;
     private PlayerEat playerEat;
     private PlayerAttack playerAttack;
+    private GrappleController grapple;
 
     private bool isDead;
 
@@ -32,6 +33,7 @@ public class PlayerController : EntityBase {
         playerAnimation = GetComponent<PlayerAnimation>();
         playerEat = GetComponent<PlayerEat>();
         playerAttack = GetComponent<PlayerAttack>();
+        grapple = GetComponent<GrappleController>();
         transformer = transform;
 
         audsys = AudioSystem.instance;
@@ -42,7 +44,7 @@ public class PlayerController : EntityBase {
         base.Update();
         if (Time.time >= playerAttack.nextAttackTime && !PauseMenu.isPaused)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 playerAttack.Melee();
                 playerAttack.nextAttackTime = Time.time + 1f / playerAttack.attackRate;
@@ -100,9 +102,18 @@ public class PlayerController : EntityBase {
             playerMovement.Launch();
         }
 
-        
-        
-        
+        /* Launch */
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            grapple.Grapple();
+        } else if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            grapple.Ungrapple();
+        }
+
+
+
+
 
     }
 
